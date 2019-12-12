@@ -36,7 +36,7 @@ $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
  var iost_memo  = '<?php echo get_bloginfo(); ?>' ;
 
  </script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
  <script type="text/javascript" src="<?php echo plugin_dir_url( __FILE__ ) . 'iost/dist/iost.min.js'; ?>"></script>
  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
