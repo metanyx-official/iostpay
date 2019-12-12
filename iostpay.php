@@ -246,9 +246,9 @@ if ( ! function_exists( 'iostpay_add_other_fields_for_packaging' ) ) {
 	}
 }
 
-add_action( 'woocommerce_thankyou', 'bbloomer_redirectcustom' );
+add_action( 'woocommerce_thankyou', 'iostpay_redirectcustom' );
 
-function bbloomer_redirectcustom( $order_id ) {
+function iostpay_redirectcustom( $order_id ) {
 	$order = wc_get_order( $order_id );
 	$url   = plugin_dir_url( __FILE__ ) . 'paybyiost.php?order=' . $order_id;
 
