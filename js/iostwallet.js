@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async function() {
         const iost = IWalletJS.newIOST(IOST);
         var paybyiost_form = jQuery('form#paybyiost');
 	   
-		    //var cart_total="1";
+		  
 			const tx = iost.callABI("token.iost", "transfer", ["iost", account, iostpay_account_id, cart_total, "OrderID: "+order_id]);
 			
             tx.addApprove("iost", cart_total);
@@ -121,7 +121,6 @@ function ChekForPayResp( status ) {
             },
             success: function( json ) {
 
-				// console.log(json) ;
                 if (json !== '') {
 					
                     const obj = JSON.parse(json);
@@ -138,7 +137,7 @@ function ChekForPayResp( status ) {
         return false;
 
 
-    }, 5000);
+    }, 4000);
 
 
 }
@@ -168,9 +167,8 @@ function ChekForPayResp( status ) {
 			     var message 		= obj.message	;
 				 var order_key		=obj.order_key;
 					swal({
-                        title: "Iwallet",
                         text : message,
-                        type : "Payment completed"
+                        icon : "success"
                     }).then((willDelete) => {
 						var final_url=order_received_url+'/?key='+obj.order_key+'&success=1';
 						window.location = final_url ;
