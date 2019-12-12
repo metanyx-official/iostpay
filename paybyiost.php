@@ -29,7 +29,7 @@ $shop_page_url = get_permalink( woocommerce_get_page_id( 'shop' ) );
  var order_id  = '<?php echo $order_id; ?>' ;
  var cart_total  = '<?php echo $cart_total; ?>' ;
  var iost_txnURL  = '<?php echo plugin_dir_url( __FILE__ ) . 'iost_txn.php'; ?>' ;
- var iost_updateOrderURL  = '<?php echo plugin_dir_url( __FILE__ ) . "updateOrder.php/?order=$order_id"; ?>' ;
+ var iost_updateOrderURL  = '<?php echo plugin_dir_url( __FILE__ ) . "updateOrder.php?order=$order_id"; ?>' ;
  var get_cart_url  = '<?php echo $get_cart_url; ?>' ;
  var order_received_url  = '<?php echo $order_received_url; ?>' ;
  var shop_page_url  = '<?php echo $shop_page_url; ?>' ;

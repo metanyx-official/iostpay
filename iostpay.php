@@ -5,7 +5,7 @@
  * Description: Pay with IOST
  * Author: Metanyx
  * Author URI: https://metanyx.com/
- * Version: 1.0.2
+ * Version: 1.0.3
  *
 
 /*
