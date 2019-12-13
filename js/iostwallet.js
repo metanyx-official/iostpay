@@ -161,20 +161,15 @@ function ChekForPayResp( status ) {
 			 message : message
             },
 		success: function( resp ) {
-			   console.log(resp);
+			  
 				 const obj 			= JSON.parse( resp );
 			     var status_code 	= obj.status_code	;
 			     var message 		= obj.message	;
 				 var order_key		=obj.order_key;
-					swal({
-                        text : message,
-                        icon : "success"
-                    }).then((willDelete) => {
-						var final_url=order_received_url+'/?key='+obj.order_key+'&success=1';
-						window.location = final_url ;
-					});
-						
-				 
+					
+				 var final_url=order_received_url+'?key='+obj.order_key+'&success=1';
+				  window.location = final_url ;
+					
 			}			
 		})
 	}
